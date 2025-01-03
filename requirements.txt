@@ -3,3 +3,4 @@ streamlit-webrtc==0.47.9
 opencv-python
 opencv-python-headless
 twilio
+opencv-contrib-python
