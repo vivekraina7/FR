@@ -152,7 +152,7 @@ from turn import get_ice_servers
 HERE = Path(__file__).parent
 ROOT = HERE.parent
 logger = logging.getLogger(__name__)
-FRAMES_DIR = ROOT / "Realtime-Face-Detection" / "frames"
+FRAMES_DIR = ROOT / "frames"
 st.write(FRAMES_DIR)
 FRAMES_DIR.mkdir(parents=True, exist_ok=True)
 
