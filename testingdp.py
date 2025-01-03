@@ -100,8 +100,8 @@ import numpy as np
 import streamlit as st
 from streamlit_webrtc import WebRtcMode, webrtc_streamer
 
-from sample_utils.download import download_file
-from sample_utils.turn import get_ice_servers
+from download import download_file
+from turn import get_ice_servers
 
 with st.sidebar:
     # st.image("./assets/faceman_cropped.png", width=260)
