@@ -211,10 +211,18 @@ webrtc_ctx = webrtc_streamer(
     media_stream_constraints={"video": True, "audio": False},
     async_processing=True,
 )
-
+def list_saved_files():
+    files = list(FRAMES_DIR.glob("*.jpg"))
+    return [str(file.name) for file in files]
+    
 if st.checkbox("Show saved face frame names", value=True):
     if webrtc_ctx.state.playing:
         labels_placeholder = st.empty()
         while True:
             frame_name = result_queue.get()
             labels_placeholder.text(f"Saved: {frame_name}")
+            
+if st.button("List all saved files"):
+    saved_files = list_saved_files()
+    st.write("Saved Files:")
+    st.write(saved_files)
